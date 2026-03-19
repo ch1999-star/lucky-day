@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;오늘의 한 줄&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, #1f1c2c, #928dab);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.quote {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.index {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="quote" id="quote"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="index" id="index"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="showRandomQuote()"&gt;다른 문장 보기&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const quotes = [</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"버티는 하루도 결국은 앞으로 가는 중이다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"지금 느린 건 멈춘 게 아니라 쌓이는 과정이다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"확신이 없어도 계속 가는 사람이 결국 도착한다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"오늘의 선택이 내일의 나를 만든다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"지나간 후회보다 아직 남은 가능성이 더 중요하다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"완벽하려다 멈추지 말고, 부족해도 계속 가라.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"작은 반복이 결국 큰 차이를 만든다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"흔들리는 건 약한 게 아니라 살아있다는 증거다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"지금의 나를 견디는 것도 하나의 실력이다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"늦었다고 생각할 때가 아니라, 아직 시작할 수 있는 때다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"남과 비교하는 순간, 내 속도는 사라진다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"불안은 방향을 잃었을 때 커진다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"결국 남는 건 결과보다 그 과정에서의 태도다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"지금의 선택이 쌓여 결국 인생이 된다.",</p>
+<p class="p1"><span class="Apple-converted-space">      </span>"멈추지 않는 이상 실패는 확정되지 않는다."</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function getTodayIndex() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const today = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return today.getDate() % quotes.length;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showTodayQuote() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const index = getTodayIndex();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("quote").innerText = quotes[index];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("index").innerText = `오늘의 문장 (${index + 1}/15)`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showRandomQuote() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const randomIndex = Math.floor(Math.random() * quotes.length);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("quote").innerText = quotes[randomIndex];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("index").innerText = `랜덤 문장 (${randomIndex + 1}/15)`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>showTodayQuote();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
